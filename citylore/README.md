@@ -6,7 +6,7 @@ Sube una foto de cualquier lugar y Gemini genera una leyenda urbana ilustrada am
 
 **Demo de:** Charla 1 — "Construi una App con IA y No Escribi (casi) Nada"
 
-> Volver al [README principal](../README.md) · 🔗 [Slides de la charla](https://docs.google.com/presentation/d/1Xlhwl7338xxZzfv3znUzMLE3nEqJWfttCKKJ_6TTzI8/edit)
+> Volver al [README principal](../README.md) · [Slides de la charla](https://docs.google.com/presentation/d/1Xlhwl7338xxZzfv3znUzMLE3nEqJWfttCKKJ_6TTzI8/edit)
 
 ## Deploy
 

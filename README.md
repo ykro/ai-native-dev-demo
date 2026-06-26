@@ -4,14 +4,14 @@ Dos aplicaciones multimodales completas, construidas con **Google Antigravity** 
 
 > **Demo de la Charla 1 — "Construí una App con IA y No Escribí (casi) Nada"**
 >
-> ¿Qué pasa cuando un desarrollador deja de escribir código línea por línea y empieza a construir con agentes autónomos? No es vibe coding: es desarrollo **AI-native** donde vos sos el arquitecto y los agentes son tu equipo. Este repo tiene las dos apps que se construyen y demuestran en vivo.
+> ¿Qué pasa cuando un desarrollador deja de escribir código línea por línea y empieza a construir con agentes autónomos? No es vibe coding: es desarrollo **AI-native** donde tú eres el arquitecto y los agentes son tu equipo. Este repo tiene las dos apps que se construyen y demuestran en vivo.
 
-🔗 **Slides:** https://docs.google.com/presentation/d/1Xlhwl7338xxZzfv3znUzMLE3nEqJWfttCKKJ_6TTzI8/edit
+**Slides:** https://docs.google.com/presentation/d/1Xlhwl7338xxZzfv3znUzMLE3nEqJWfttCKKJ_6TTzI8/edit
 
 | App | Qué hace | Demo en vivo |
 |-----|----------|--------------|
-| 🏙️ **[CityLore](#-citylore-leyenda)** (leyenda) | Foto de un lugar → leyenda urbana ilustrada | https://citylore-611681112050.us-central1.run.app |
-| 💭 **[DreamBooth](#-dreambooth-sueño)** (sueño) | Describí un sueño (texto/voz) → diario visual surrealista | https://dreambooth-611681112050.us-central1.run.app |
+| **[CityLore](#citylore-leyenda)** (leyenda) | Foto de un lugar → leyenda urbana ilustrada | https://citylore-611681112050.us-central1.run.app |
+| **[DreamBooth](#dreambooth-sueño)** (sueño) | Describe un sueño (texto/voz) → diario visual surrealista | https://dreambooth-611681112050.us-central1.run.app |
 
 Cada app tiene su propio README con más detalle: [`citylore/README.md`](citylore/README.md) · [`dreambooth/README.md`](dreambooth/README.md)
 
@@ -32,9 +32,9 @@ Cada app tiene su propio README con más detalle: [`citylore/README.md`](citylor
 
 ---
 
-## 🏙️ CityLore (leyenda)
+## CityLore (leyenda)
 
-Subí una foto de cualquier lugar y Gemini genera una **leyenda urbana ilustrada** ambientada ahí.
+Sube una foto de cualquier lugar y Gemini genera una **leyenda urbana ilustrada** ambientada ahí.
 
 **Flujo:** Foto → Gemini Vision analiza arquitectura/época/contexto → genera una narrativa en 4 paneles → genera las ilustraciones estilo novela gráfica (en paralelo, con streaming SSE).
 
@@ -57,23 +57,23 @@ generate_single_panel(panel_desc, place_analysis)
 - `GET /stream/{job_id}` (SSE) emite cada panel a medida que se genera — la UI no espera a los 4.
 - `GET /status/{job_id}` es el fallback por polling.
 
-### Correrlo
+### Cómo correrlo
 
 ```bash
 cd citylore
 uv sync
-cp .env.example .env          # poné tu GOOGLE_GENAI_API_KEY
+cp .env.example .env          # pon tu GOOGLE_GENAI_API_KEY
 cd frontend && npm install && npm run build && cd ..
 uv run uvicorn app:app --reload --port 8000
 ```
 
-Abrir http://localhost:8000 y subir una foto.
+Abre http://localhost:8000 y sube una foto.
 
 ---
 
-## 💭 DreamBooth (sueño)
+## DreamBooth (sueño)
 
-Describí un sueño (escribiéndolo o **por voz**) y obtené un **diario visual** con imágenes surrealistas generadas por Gemini.
+Describe un sueño (escribiéndolo o **por voz**) y obtén un **diario visual** con imágenes surrealistas generadas por Gemini.
 
 **Flujo:** Texto/Voz (Web Speech API) → extrae 3 escenas → genera una interpretación poética → genera ilustraciones estilo "Dalí meets Studio Ghibli".
 
@@ -93,24 +93,24 @@ generate_dream_images(scenes)                 # → imágenes base64
 - `POST /dream` recibe `{ dream_text }` y devuelve interpretación + imágenes.
 - La captura de voz es 100% frontend con la **Web Speech API** (Chrome/Edge).
 
-### Correrlo
+### Cómo correrlo
 
 ```bash
 cd dreambooth
 uv sync
-cp .env.example .env          # poné tu GOOGLE_GENAI_API_KEY
+cp .env.example .env          # pon tu GOOGLE_GENAI_API_KEY
 cd frontend && npm install && npm run build && cd ..
 uv run uvicorn app:app --reload --port 8001
 ```
 
-Abrir http://localhost:8001 — escribí el sueño o usá el micrófono.
+Abre http://localhost:8001 — escribe el sueño o usa el micrófono.
 
 ---
 
 ## Requisitos
 
 - Python 3.11+ y [`uv`](https://github.com/astral-sh/uv)
-- Node 18+ (solo si modificás el frontend)
+- Node 18+ (solo si modificas el frontend)
 - Una API key de Google Gemini ([AI Studio](https://aistudio.google.com/apikey))
 
-> **Nota:** las API keys nunca se commitean. En cada app, copiá `.env.example` a `.env` con tu propia key.
+> **Nota:** las API keys nunca se commitean. En cada app, copia `.env.example` a `.env` con tu propia key.
