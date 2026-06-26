@@ -1,6 +1,6 @@
 """DreamBooth — Verbal dream description → visual dream journal with surrealist imagery.
 
-Demo for Charla 1: "Construí una App con IA y No Escribí (casi) Nada"
+Demo: "Construí una App con IA y No Escribí (casi) Nada"
 Flow: Text/Voice (Web Speech API) → extract scenes → generate interpretation → generate surrealist images
 """
 

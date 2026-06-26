@@ -4,9 +4,9 @@ Sube una foto de cualquier lugar y Gemini genera una leyenda urbana ilustrada am
 
 **Flow:** Foto → Gemini Vision analiza arquitectura/era/contexto → genera narrativa en 4 paneles → genera ilustraciones estilo novela grafica.
 
-**Demo de:** Charla 1 — "Construi una App con IA y No Escribi (casi) Nada"
+**Demo de:** "Construi una App con IA y No Escribi (casi) Nada"
 
-> Volver al [README principal](../README.md) · [Slides de la charla](https://docs.google.com/presentation/d/1Xlhwl7338xxZzfv3znUzMLE3nEqJWfttCKKJ_6TTzI8/edit)
+> Volver al [README principal](../README.md) · [Slides de la presentación](https://docs.google.com/presentation/d/1Xlhwl7338xxZzfv3znUzMLE3nEqJWfttCKKJ_6TTzI8/edit)
 
 ## Deploy
 
@@ -25,7 +25,7 @@ https://citylore-611681112050.us-central1.run.app
 
 ```bash
 # 1. Instalar dependencias del backend
-cd charla1-ai-native/citylore
+cd citylore
 uv sync
 
 # 2. Configurar API key

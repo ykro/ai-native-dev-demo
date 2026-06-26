@@ -4,9 +4,9 @@ Describe un sueno (texto o voz) y obtene un diario visual con imagenes surrealis
 
 **Flow:** Texto/Voz (Web Speech API) → extrae 3 escenas → genera interpretacion poetica → genera ilustraciones estilo "Dali meets Studio Ghibli".
 
-**Demo de:** Charla 1 — "Construi una App con IA y No Escribi (casi) Nada"
+**Demo de:** "Construi una App con IA y No Escribi (casi) Nada"
 
-> Volver al [README principal](../README.md) · [Slides de la charla](https://docs.google.com/presentation/d/1Xlhwl7338xxZzfv3znUzMLE3nEqJWfttCKKJ_6TTzI8/edit)
+> Volver al [README principal](../README.md) · [Slides de la presentación](https://docs.google.com/presentation/d/1Xlhwl7338xxZzfv3znUzMLE3nEqJWfttCKKJ_6TTzI8/edit)
 
 ## Deploy
 
@@ -25,7 +25,7 @@ https://dreambooth-611681112050.us-central1.run.app
 
 ```bash
 # 1. Instalar dependencias del backend
-cd charla1-ai-native/dreambooth
+cd dreambooth
 uv sync
 
 # 2. Configurar API key

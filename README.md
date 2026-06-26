@@ -1,9 +1,7 @@
-# AI-Native Dev — Charla 1
+# AI-Native Dev — Construí una App con IA y No Escribí (casi) Nada
 
 Dos aplicaciones multimodales completas, construidas con **Google Antigravity** y la **API de Gemini 3.1**, desde la idea hasta el deploy en Cloud Run.
 
-> **Demo de la Charla 1 — "Construí una App con IA y No Escribí (casi) Nada"**
->
 > ¿Qué pasa cuando un desarrollador deja de escribir código línea por línea y empieza a construir con agentes autónomos? No es vibe coding: es desarrollo **AI-native** donde tú eres el arquitecto y los agentes son tu equipo. Este repo tiene las dos apps que se construyen y demuestran en vivo.
 
 **Slides:** https://docs.google.com/presentation/d/1Xlhwl7338xxZzfv3znUzMLE3nEqJWfttCKKJ_6TTzI8/edit

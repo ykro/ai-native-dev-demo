@@ -1,6 +1,6 @@
 """CityLore — Photo of any place -> Gemini generates an illustrated urban legend.
 
-Demo for Charla 1: "Construi una App con IA y No Escribi (casi) Nada"
+Demo: "Construi una App con IA y No Escribi (casi) Nada"
 Flow: Photo -> Gemini Vision analyzes architecture/era/context -> generates narrative -> generates illustrated panels
 """
 
