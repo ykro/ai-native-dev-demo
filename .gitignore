@@ -1,0 +1,17 @@
+# Secrets
+.env
+.env.local
+
+# Python
+*.pyc
+__pycache__/
+.venv/
+output/
+
+# Node / frontend build
+node_modules/
+dist/
+static/dist/
+
+# OS
+.DS_Store

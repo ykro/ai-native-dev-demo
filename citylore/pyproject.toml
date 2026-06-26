@@ -1,0 +1,12 @@
+[project]
+name = "citylore"
+version = "0.1.0"
+description = "CityLore — Photo of any place → Gemini generates an illustrated urban legend"
+requires-python = ">=3.11"
+dependencies = [
+    "google-genai>=1.14.0",
+    "python-dotenv",
+    "fastapi",
+    "python-multipart",
+    "uvicorn[standard]",
+]
